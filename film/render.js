@@ -38,6 +38,18 @@ const server = http.createServer((req, res) => {
       await stage.screenshot({ path: f });
       console.log(f, ((Date.now() - t0) / 1000).toFixed(1) + 's');
     }
+  } else if (mode === 'frames') {
+    // node render.js frames <start> <end> <fps> <subframes>  -> frames/f_00000.png
+    const [a, e, fps, N] = [+args[1], +args[2], +(args[3] || 60), +(args[4] || 16)];
+    fs.mkdirSync(path.join(ROOT, 'frames'), { recursive: true });
+    const T0 = Date.now();
+    for (let i = a; i < e; i++) {
+      const f = path.join(ROOT, 'frames', `f_${String(i).padStart(5, '0')}.png`);
+      if (fs.existsSync(f)) continue;
+      await p.evaluate(([t, N]) => window.seek(t, N), [i / fps, N]);
+      await p.screenshot({ path: f + '.tmp.png', clip: { x: 0, y: 0, width: 1440, height: 1152 }, timeout: 0 }); fs.renameSync(f + '.tmp.png', f);
+      if (i % 20 === 0) console.log(`frame ${i} [${a}-${e})  ${((Date.now() - T0) / 1000).toFixed(0)}s`);
+    }
   } else {
     const fps = +(args[1] || 60), N = +(args[2] || 16), audio = args[3];
     const frames = Math.round(14.5 * fps);
