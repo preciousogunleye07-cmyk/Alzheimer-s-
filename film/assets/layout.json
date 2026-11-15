@@ -1,0 +1,543 @@
+{
+ "url": "https://www.orbitspace.academy",
+ "width": 1440,
+ "height": 7239,
+ "scale": 2,
+ "pad": 28,
+ "chunks": [
+  {
+   "file": "page_0.png",
+   "y": 0,
+   "h": 2048
+  },
+  {
+   "file": "page_1.png",
+   "y": 2048,
+   "h": 2048
+  },
+  {
+   "file": "page_2.png",
+   "y": 4096,
+   "h": 2048
+  },
+  {
+   "file": "page_3.png",
+   "y": 6144,
+   "h": 1095
+  }
+ ],
+ "pieces": [
+  {
+   "id": "hero-card",
+   "kind": "mockup",
+   "x": 144,
+   "y": 508.75,
+   "w": 1152,
+   "h": 480,
+   "parent": null,
+   "file": "piece_hero-card.png",
+   "img": {
+    "x": 116,
+    "y": 480.75,
+    "width": 1208,
+    "height": 536
+   }
+  },
+  {
+   "id": "hero-btn",
+   "kind": "button",
+   "x": 539.8125,
+   "y": 403.75,
+   "w": 163.4375,
+   "h": 48,
+   "parent": null,
+   "file": "piece_hero-btn.png",
+   "img": {
+    "x": 511.8125,
+    "y": 375.75,
+    "width": 219.4375,
+    "height": 104
+   }
+  },
+  {
+   "id": "hero-btn2",
+   "kind": "button",
+   "x": 719.25,
+   "y": 402.75,
+   "w": 180.921875,
+   "h": 50,
+   "parent": null,
+   "file": "piece_hero-btn2.png",
+   "img": {
+    "x": 691.25,
+    "y": 374.75,
+    "width": 236.921875,
+    "height": 106
+   }
+  },
+  {
+   "id": "chip-rotate",
+   "kind": "chip",
+   "x": 815.875,
+   "y": 189.5,
+   "w": 344.890625,
+   "h": 64,
+   "parent": null,
+   "file": "piece_chip-rotate.png",
+   "img": {
+    "x": 787.875,
+    "y": 161.5,
+    "width": 400.890625,
+    "height": 120
+   }
+  },
+  {
+   "id": "chip-start",
+   "kind": "chip",
+   "x": 1164.1875,
+   "y": 27,
+   "w": 126.8125,
+   "h": 40,
+   "parent": null,
+   "file": "piece_chip-start.png",
+   "img": {
+    "x": 1136.1875,
+    "y": 0,
+    "width": 182.8125,
+    "height": 95
+   }
+  },
+  {
+   "id": "course-0",
+   "kind": "card",
+   "x": 144,
+   "y": 1891,
+   "w": 368,
+   "h": 575,
+   "parent": null,
+   "file": "piece_course-0.png",
+   "img": {
+    "x": 116,
+    "y": 1863,
+    "width": 424,
+    "height": 631
+   }
+  },
+  {
+   "id": "course-photo-0",
+   "kind": "photo",
+   "x": 145,
+   "y": 1892,
+   "w": 366,
+   "h": 176,
+   "parent": "course-0",
+   "file": "piece_course-photo-0.png",
+   "img": {
+    "x": 117,
+    "y": 1864,
+    "width": 422,
+    "height": 232
+   }
+  },
+  {
+   "id": "course-1",
+   "kind": "card",
+   "x": 536,
+   "y": 1891,
+   "w": 368,
+   "h": 575,
+   "parent": null,
+   "file": "piece_course-1.png",
+   "img": {
+    "x": 508,
+    "y": 1863,
+    "width": 424,
+    "height": 631
+   }
+  },
+  {
+   "id": "course-photo-1",
+   "kind": "photo",
+   "x": 537,
+   "y": 1892,
+   "w": 366,
+   "h": 176,
+   "parent": "course-1",
+   "file": "piece_course-photo-1.png",
+   "img": {
+    "x": 509,
+    "y": 1864,
+    "width": 422,
+    "height": 232
+   }
+  },
+  {
+   "id": "course-2",
+   "kind": "card",
+   "x": 928,
+   "y": 1891,
+   "w": 368,
+   "h": 575,
+   "parent": null,
+   "file": "piece_course-2.png",
+   "img": {
+    "x": 900,
+    "y": 1863,
+    "width": 424,
+    "height": 631
+   }
+  },
+  {
+   "id": "course-photo-2",
+   "kind": "photo",
+   "x": 929,
+   "y": 1892,
+   "w": 366,
+   "h": 176,
+   "parent": "course-2",
+   "file": "piece_course-photo-2.png",
+   "img": {
+    "x": 901,
+    "y": 1864,
+    "width": 422,
+    "height": 232
+   }
+  },
+  {
+   "id": "course-chip-0",
+   "kind": "flychip",
+   "x": 403.65625,
+   "y": 1904,
+   "w": 95.34375,
+   "h": 25,
+   "parent": "course-photo-0",
+   "file": "piece_course-chip-0.png",
+   "img": {
+    "x": 375.65625,
+    "y": 1876,
+    "width": 151.34375,
+    "height": 81
+   }
+  },
+  {
+   "id": "course-chip-1",
+   "kind": "flychip",
+   "x": 1212.0625,
+   "y": 1904,
+   "w": 70.9375,
+   "h": 25,
+   "parent": "course-photo-2",
+   "file": "piece_course-chip-1.png",
+   "img": {
+    "x": 1184.0625,
+    "y": 1876,
+    "width": 126.9375,
+    "height": 81
+   }
+  },
+  {
+   "id": "why-0",
+   "kind": "card",
+   "x": 132,
+   "y": 3235,
+   "w": 376,
+   "h": 247.75,
+   "parent": null,
+   "file": "piece_why-0.png",
+   "img": {
+    "x": 104,
+    "y": 3207,
+    "width": 432,
+    "height": 303.75
+   }
+  },
+  {
+   "id": "why-1",
+   "kind": "card",
+   "x": 532,
+   "y": 3235,
+   "w": 376,
+   "h": 272.5,
+   "parent": null,
+   "file": "piece_why-1.png",
+   "img": {
+    "x": 504,
+    "y": 3207,
+    "width": 432,
+    "height": 328.5
+   }
+  },
+  {
+   "id": "why-2",
+   "kind": "card",
+   "x": 932,
+   "y": 3235,
+   "w": 376,
+   "h": 272.5,
+   "parent": null,
+   "file": "piece_why-2.png",
+   "img": {
+    "x": 904,
+    "y": 3207,
+    "width": 432,
+    "height": 328.5
+   }
+  },
+  {
+   "id": "why-3",
+   "kind": "card",
+   "x": 132,
+   "y": 3531.5,
+   "w": 376,
+   "h": 267.25,
+   "parent": null,
+   "file": "piece_why-3.png",
+   "img": {
+    "x": 104,
+    "y": 3503.5,
+    "width": 432,
+    "height": 323.25
+   }
+  },
+  {
+   "id": "why-4",
+   "kind": "card",
+   "x": 532,
+   "y": 3531.5,
+   "w": 376,
+   "h": 272.5,
+   "parent": null,
+   "file": "piece_why-4.png",
+   "img": {
+    "x": 504,
+    "y": 3503.5,
+    "width": 432,
+    "height": 328.5
+   }
+  },
+  {
+   "id": "why-5",
+   "kind": "card",
+   "x": 932,
+   "y": 3531.5,
+   "w": 376,
+   "h": 288.5,
+   "parent": null,
+   "file": "piece_why-5.png",
+   "img": {
+    "x": 904,
+    "y": 3503.5,
+    "width": 432,
+    "height": 344.5
+   }
+  },
+  {
+   "id": "why-6",
+   "kind": "card",
+   "x": 132,
+   "y": 3844,
+   "w": 376,
+   "h": 283.25,
+   "parent": null,
+   "file": "piece_why-6.png",
+   "img": {
+    "x": 104,
+    "y": 3816,
+    "width": 432,
+    "height": 339.25
+   }
+  },
+  {
+   "id": "why-7",
+   "kind": "card",
+   "x": 532,
+   "y": 3844,
+   "w": 376,
+   "h": 247.75,
+   "parent": null,
+   "file": "piece_why-7.png",
+   "img": {
+    "x": 504,
+    "y": 3816,
+    "width": 432,
+    "height": 303.75
+   }
+  },
+  {
+   "id": "why-8",
+   "kind": "card",
+   "x": 932,
+   "y": 3844,
+   "w": 376,
+   "h": 247.75,
+   "parent": null,
+   "file": "piece_why-8.png",
+   "img": {
+    "x": 904,
+    "y": 3816,
+    "width": 432,
+    "height": 303.75
+   }
+  },
+  {
+   "id": "why-9",
+   "kind": "card",
+   "x": 532,
+   "y": 4151.25,
+   "w": 376,
+   "h": 288.5,
+   "parent": null,
+   "file": "piece_why-9.png",
+   "img": {
+    "x": 504,
+    "y": 4123.25,
+    "width": 432,
+    "height": 344.5
+   }
+  },
+  {
+   "id": "testimonial",
+   "kind": "testimonial",
+   "x": 132,
+   "y": 4479.75,
+   "w": 1176,
+   "h": 174.25,
+   "parent": null,
+   "file": "piece_testimonial.png",
+   "img": {
+    "x": 104,
+    "y": 4451.75,
+    "width": 1232,
+    "height": 230.25
+   }
+  },
+  {
+   "id": "siwes-card",
+   "kind": "card",
+   "x": 144,
+   "y": 4910,
+   "w": 1152,
+   "h": 771,
+   "parent": null,
+   "file": "piece_siwes-card.png",
+   "img": {
+    "x": 116,
+    "y": 4882,
+    "width": 1208,
+    "height": 827
+   }
+  },
+  {
+   "id": "siwes-photo",
+   "kind": "photo",
+   "x": 856.15625,
+   "y": 4984,
+   "w": 365.84375,
+   "h": 176,
+   "parent": "siwes-card",
+   "file": "piece_siwes-photo.png",
+   "img": {
+    "x": 828.15625,
+    "y": 4956,
+    "width": 421.84375,
+    "height": 232
+   }
+  },
+  {
+   "id": "faq-0",
+   "kind": "card",
+   "x": 344,
+   "y": 6054,
+   "w": 752,
+   "h": 62,
+   "parent": null,
+   "file": "piece_faq-0.png",
+   "img": {
+    "x": 316,
+    "y": 6026,
+    "width": 808,
+    "height": 118
+   }
+  },
+  {
+   "id": "faq-1",
+   "kind": "card",
+   "x": 344,
+   "y": 6128,
+   "w": 752,
+   "h": 62,
+   "parent": null,
+   "file": "piece_faq-1.png",
+   "img": {
+    "x": 316,
+    "y": 6100,
+    "width": 808,
+    "height": 118
+   }
+  },
+  {
+   "id": "faq-2",
+   "kind": "card",
+   "x": 344,
+   "y": 6202,
+   "w": 752,
+   "h": 62,
+   "parent": null,
+   "file": "piece_faq-2.png",
+   "img": {
+    "x": 316,
+    "y": 6174,
+    "width": 808,
+    "height": 118
+   }
+  },
+  {
+   "id": "faq-3",
+   "kind": "card",
+   "x": 344,
+   "y": 6276,
+   "w": 752,
+   "h": 62,
+   "parent": null,
+   "file": "piece_faq-3.png",
+   "img": {
+    "x": 316,
+    "y": 6248,
+    "width": 808,
+    "height": 118
+   }
+  },
+  {
+   "id": "faq-4",
+   "kind": "card",
+   "x": 344,
+   "y": 6350,
+   "w": 752,
+   "h": 62,
+   "parent": null,
+   "file": "piece_faq-4.png",
+   "img": {
+    "x": 316,
+    "y": 6322,
+    "width": 808,
+    "height": 118
+   }
+  },
+  {
+   "id": "footer-hub",
+   "kind": "card",
+   "x": 144,
+   "y": 6557,
+   "w": 1152,
+   "h": 117,
+   "parent": null,
+   "file": "piece_footer-hub.png",
+   "img": {
+    "x": 116,
+    "y": 6529,
+    "width": 1208,
+    "height": 173
+   }
+  }
+ ]
+}

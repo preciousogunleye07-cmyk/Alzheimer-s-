@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Orbit Space Fly-over</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@500&family=Instrument+Serif:ital@1&display=block" rel="stylesheet">
+<style>
+  html, body { margin: 0; padding: 0; background: #f5f7f8; overflow: hidden; }
+  #stage { position: relative; width: 1440px; height: 1152px; overflow: hidden; }
+  canvas { position: absolute; left: 0; top: 0; width: 1440px; height: 1152px; }
+  #title { position: absolute; left: 0; top: 0; width: 1440px; height: 1152px; pointer-events: none; }
+  .badge { position: absolute; top: 44px; left: 50%; transform: translateX(-50%); display: flex; align-items: center; gap: 10px;
+    background: #fff; border-radius: 999px; padding: 9px 20px 9px 14px; box-shadow: 0 6px 18px rgba(26,33,51,0.08), 0 1px 2px rgba(26,33,51,0.06);
+    font: 500 21px/1 'Geist', sans-serif; color: #15171c; letter-spacing: -0.01em; white-space: nowrap; opacity: 0; }
+  .badge svg { width: 30px; height: 26px; display: block; }
+  .line { position: absolute; left: 0; width: 1440px; text-align: center; white-space: nowrap; }
+  .l1 { top: 100px; font: 500 74px/1 'Geist', sans-serif; letter-spacing: -0.035em; color: #111318; }
+  .l2 { top: 178px; font: italic 400 82px/1 'Instrument Serif', serif; letter-spacing: -0.01em; color: #8b8b92; }
+  .w { display: inline-block; opacity: 0; will-change: transform, filter, opacity; }
+</style>
+</head>
+<body>
+<div id="stage">
+  <canvas id="gl" width="1440" height="1152"></canvas>
+  <div id="title">
+    <div class="badge" id="badge"><span id="badgeLogo"></span><span id="badgeName"></span></div>
+    <div class="line l1" id="l1"></div>
+    <div class="line l2" id="l2"></div>
+  </div>
+</div>
+<script src="config.js"></script>
+<script src="film.js"></script>
+</body>
+</html>
