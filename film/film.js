@@ -92,8 +92,9 @@ const byId = Object.fromEntries(pieces.map(p => [p.id, p]));
 const siwesPhoto = byId['siwes-photo'];
 const SIWES_T = siwesPhoto ? tAtLy(siwesPhoto.cy - 760) : 99;
 
+const FLAT = location.search.includes('flat');   // diagnostic: no lifts, no tiles (camera-only flow check)
 function pieceState(p, t) {
-  const id = p.id; let z = 0, th = 0, dx = 0, edge = 0;
+  const id = FLAT ? '' : p.id; let z = 0, th = 0, dx = 0, edge = 0;
   const down = L(t, 3.2, 6.0);
   let m;
   if (id === 'hero-card') z = 30;
@@ -128,6 +129,7 @@ const zUnder = (p, t) => p.parent && byId[p.parent] ? pieceState(byId[p.parent],
 const TILE_START = [[512, 414], [512, 446], [928, 414], [928, 446]];
 const TILE_HANG = [[-60, 150, 150, 196], [110, -40, 90, 148], [1500, 140, 140, 186], [1330, -50, 100, 142]];
 function tileState(i, t, cam) {
+  if (FLAT) return { P: v3(0, 0, 0), size: 0, flat: 0, vis: 0 };
   if (t < 3.0) {
     const l = L(t, 0.1 + 0.08 * i, 1.1 + 0.08 * i), lz = smoother(Math.pow(clamp((t - 0.1 - 0.08 * i) / 1.0, 0, 1), 0.7));
     const trail = 300 * L(t, 1.2, 2.4);

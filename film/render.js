@@ -21,7 +21,7 @@ const server = http.createServer((req, res) => {
   const b = await chromium.launch({ args: flags, headless: true });
   const p = await b.newPage({ viewport: { width: 1440, height: 1152 }, deviceScaleFactor: 1 });
   p.on('console', m => { if (m.type() === 'error') console.log('[page]', m.text()); });
-  await p.goto(`http://localhost:${port}/index.html`);
+  await p.goto(`http://localhost:${port}/index.html${process.env.FLAT ? '?flat' : ''}`);
   await p.waitForFunction(() => window.filmReady || window.filmError, null, { timeout: 300000 });
   const err = await p.evaluate(() => window.filmError); if (err) { console.log(err); process.exit(1); }
   console.log('cruise px/s', (await p.evaluate(() => window.filmInfo.cruise)).toFixed(1));
@@ -41,10 +41,10 @@ const server = http.createServer((req, res) => {
   } else if (mode === 'frames') {
     // node render.js frames <start> <end> <fps> <subframes>  -> frames/f_00000.png
     const [a, e, fps, N] = [+args[1], +args[2], +(args[3] || 60), +(args[4] || 16)];
-    fs.mkdirSync(path.join(ROOT, 'frames'), { recursive: true });
+    fs.mkdirSync(path.join(ROOT, process.env.OUT || 'frames'), { recursive: true });
     const T0 = Date.now();
     for (let i = a; i < e; i++) {
-      const f = path.join(ROOT, 'frames', `f_${String(i).padStart(5, '0')}.png`);
+      const f = path.join(ROOT, process.env.OUT || 'frames', `f_${String(i).padStart(5, '0')}.png`);
       if (fs.existsSync(f)) continue;
       await p.evaluate(([t, N]) => window.seek(t, N), [i / fps, N]);
       await p.screenshot({ path: f + '.tmp.png', clip: { x: 0, y: 0, width: 1440, height: 1152 }, timeout: 0 }); fs.renameSync(f + '.tmp.png', f);
